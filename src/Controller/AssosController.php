@@ -3,6 +3,7 @@
 namespace App\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
+use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\Routing\Annotation\Route;
 
 class AssosController extends AbstractController
@@ -52,8 +53,10 @@ class AssosController extends AbstractController
     /**
      * @Route("/contact", name="contact")
      */
-    public function contact()
+    public function contact(Request $request)
+
     {
+        dump($request->request);
         return $this->render('assos/contact.html.twig', [
             'controller_name' => 'AssosController',
         ]);

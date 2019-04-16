@@ -1,0 +1,11 @@
+# app/config/config.yml
+fos_user:
+  db_driver: orm
+  firewall_name: main
+  user_class: App\Entity\User
+  from_email:
+    address: "halawahammache1983@gmail.com"
+    sender_name: "admin"
+  registration:
+    form:
+      type: App\Form\FormilaireType
