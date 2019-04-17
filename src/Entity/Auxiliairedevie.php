@@ -42,7 +42,9 @@ class Auxiliairedevie
      * @ORM\ManyToMany(targetEntity="App\Entity\Employeur", mappedBy="auxiliaires")
      */
     private $employeurs;
-
+public function __toString(){
+    return $this->getNom(). $this->getPrenom();
+}
     public function __construct()
     {
         $this->employeurs = new ArrayCollection();
